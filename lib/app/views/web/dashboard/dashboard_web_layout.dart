@@ -23,8 +23,10 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(flex: 1, child: _header()),
-          Expanded(flex: 9, child: _body()),
+          _header(),
+          Expanded(child: _body())
+          // Expanded(flex: 1, child: _header()),
+          // Expanded(flex: 9, child: _body()),
         ],
       ),
     );
