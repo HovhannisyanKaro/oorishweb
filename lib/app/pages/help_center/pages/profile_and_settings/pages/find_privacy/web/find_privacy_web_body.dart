@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:oorishweb/app/pages/help_center/enums/help_center_enums.dart';
 import 'package:oorishweb/app/views/web/help_center/help_center_steps_grid_web_view.dart';
-import 'package:oorishweb/app/views/web/dashboard/dashboard_web_layout.dart';
-import 'package:oorishweb/app/views/web/footer_web.dart';
 import 'package:oorishweb/main.dart';
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
-import '../../../../../enums/dashboard_tab_enum.dart';
-import '../../../enums/profile_settings_menu_enum.dart';
+import '../../../../../../../enums/dashboard_tab_enum.dart';
+import '../../../../../../../views/web/dashboard/dashboard_web_layout.dart';
+import '../../../../../enums/profile_settings_menu_enum.dart';
 
-class ChangeAppearanceWebBody extends StatelessWidget {
-  const ChangeAppearanceWebBody({super.key});
+class FindPrivacyWebBody extends StatelessWidget {
+  const FindPrivacyWebBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +40,7 @@ class ChangeAppearanceWebBody extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(ProfileSettingsMenuItems.changeAppearance.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(ProfileSettingsMenuItems.whereToFindPrivacyAndTerms.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 32),
                     _grid(),
                   ],
@@ -53,6 +52,6 @@ class ChangeAppearanceWebBody extends StatelessWidget {
   }
 
   Widget _grid() {
-    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterChangeAppearance.toHelpCenterMenu());
+    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterWhereToFindPrivacy.toHelpCenterMenu());
   }
 }

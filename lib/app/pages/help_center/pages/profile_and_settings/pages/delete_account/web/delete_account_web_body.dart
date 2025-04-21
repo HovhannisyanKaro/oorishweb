@@ -4,12 +4,13 @@ import 'package:oorishweb/app/views/web/help_center/help_center_steps_grid_web_v
 import 'package:oorishweb/main.dart';
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
-import '../../../../../enums/dashboard_tab_enum.dart';
-import '../../../../../views/web/dashboard/dashboard_web_layout.dart';
-import '../../../enums/profile_settings_menu_enum.dart';
+import '../../../../../../../enums/dashboard_tab_enum.dart';
+import '../../../../../../../views/web/dashboard/dashboard_web_layout.dart';
+import '../../../../../enums/profile_settings_menu_enum.dart';
 
-class ChangeLanguageWebBody extends StatelessWidget {
-  const ChangeLanguageWebBody({super.key});
+
+class DeleteAccountWebBody extends StatelessWidget {
+  const DeleteAccountWebBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class ChangeLanguageWebBody extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(ProfileSettingsMenuItems.changeLanguage.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(ProfileSettingsMenuItems.deleteAnAccount.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 32),
                     _grid(),
                   ],
@@ -52,6 +53,6 @@ class ChangeLanguageWebBody extends StatelessWidget {
   }
 
   Widget _grid() {
-    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterChangeAppLanguage.toHelpCenterMenu());
+    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterDeleteAccountEnum.toHelpCenterMenu());
   }
 }

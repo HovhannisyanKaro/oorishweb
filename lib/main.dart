@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:oorishweb/app/pages/home/home_page.dart';
 import 'package:oorishweb/app/enums/dashboard_tab_enum.dart';
 import 'package:oorishweb/app/pages/get_oorish/get_oorish_page.dart';
 import 'package:oorishweb/app/pages/help_center/help_center_page.dart';
-import 'package:oorishweb/app/pages/help_center/pages/change_appearance/change_appearance_page.dart';
-import 'package:oorishweb/app/pages/help_center/pages/change_language/change_language_page.dart';
-import 'package:oorishweb/app/pages/help_center/pages/delete_account/delete_account_page.dart';
-import 'package:oorishweb/app/pages/help_center/pages/find_privacy/find_privacy_page.dart';
 import 'package:oorishweb/app/pages/help_center/pages/items_and_carts/items_and_carts_page.dart';
 import 'package:oorishweb/app/pages/help_center/pages/profile_and_settings/profile_settings_page.dart';
+import 'package:oorishweb/app/pages/home/home_page.dart';
 import 'package:oorishweb/app/pages/privacy/privacy_page.dart';
 import 'package:oorishweb/res/values/theme/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+import 'app/pages/help_center/pages/profile_and_settings/pages/change_appearance/change_appearance_page.dart';
+import 'app/pages/help_center/pages/profile_and_settings/pages/change_language/change_language_page.dart';
+import 'app/pages/help_center/pages/profile_and_settings/pages/delete_account/delete_account_page.dart';
+import 'app/pages/help_center/pages/profile_and_settings/pages/find_privacy/find_privacy_page.dart';
 import 'config/app_theme_config.dart';
 import 'dashboard/size_config.dart';
 
@@ -108,7 +108,6 @@ extension NavigationExtension on BuildContext {
   void navigateToChangeAppearance() => Navigator.of(this).pushNamed(OorishWebRoutesEnum.changeAppearance.route);
 
   void navigateToItemsAndCarts() => Navigator.of(this).pushNamed(OorishWebRoutesEnum.itemsAndCarts.route);
-
 
   void pop() => Navigator.of(this).pop();
 }

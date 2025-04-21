@@ -5,8 +5,15 @@ class PrefixTextView extends StatelessWidget {
   final String text;
   final TextStyle? style;
   final double prefixFontSize;
+  final bool isPrefixEnable;
 
-  const PrefixTextView({super.key, required this.text, this.style, this.prefixFontSize = 10});
+  const PrefixTextView({
+    super.key,
+    required this.text,
+    this.style,
+    this.prefixFontSize = 10,
+    this.isPrefixEnable = true,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +21,8 @@ class PrefixTextView extends StatelessWidget {
     return RichText(
       text: TextSpan(
         children: [
-          TextSpan(text: '●', style: txtStyle?.copyWith(fontSize: prefixFontSize, color: context.themeExt.onSurface)),
-          TextSpan(text: '    ', style: txtStyle?.copyWith(fontSize: prefixFontSize, color: context.themeExt.onSurface)),
+          if (isPrefixEnable) TextSpan(text: '●', style: txtStyle?.copyWith(fontSize: prefixFontSize, color: context.themeExt.onSurface)),
+          if (isPrefixEnable) TextSpan(text: '    ', style: txtStyle?.copyWith(fontSize: prefixFontSize, color: context.themeExt.onSurface)),
           TextSpan(text: text, style: txtStyle),
         ],
       ),

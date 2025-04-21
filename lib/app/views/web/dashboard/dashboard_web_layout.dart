@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:oorishweb/app/views/web/footer_web.dart';
 import 'package:oorishweb/main.dart';
 
-import 'dashboard_header_view.dart';
 import '../../../enums/dashboard_tab_enum.dart';
 import '../header_tabs_web.dart';
+import 'dashboard_header_view.dart';
 
 class DashboardWebLayout extends StatefulWidget {
   final DashboardTabEnum selectedTab;
@@ -24,9 +24,7 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _header(),
-          Expanded(child: _body())
-          // Expanded(flex: 1, child: _header()),
-          // Expanded(flex: 9, child: _body()),
+          Expanded(child: _body()),
         ],
       ),
     );

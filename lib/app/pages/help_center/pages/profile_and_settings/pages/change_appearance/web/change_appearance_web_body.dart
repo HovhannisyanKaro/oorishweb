@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:oorishweb/app/pages/help_center/enums/help_center_enums.dart';
+import 'package:oorishweb/app/views/web/dashboard/dashboard_web_layout.dart';
 import 'package:oorishweb/app/views/web/help_center/help_center_steps_grid_web_view.dart';
 import 'package:oorishweb/main.dart';
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
-import '../../../../../enums/dashboard_tab_enum.dart';
-import '../../../../../views/web/dashboard/dashboard_web_layout.dart';
-import '../../../enums/profile_settings_menu_enum.dart';
+import '../../../../../../../enums/dashboard_tab_enum.dart';
+import '../../../../../enums/profile_settings_menu_enum.dart';
 
-class DeleteAccountWebBody extends StatelessWidget {
-  const DeleteAccountWebBody({super.key});
+class ChangeAppearanceWebBody extends StatelessWidget {
+  const ChangeAppearanceWebBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class DeleteAccountWebBody extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(ProfileSettingsMenuItems.deleteAnAccount.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(ProfileSettingsMenuItems.changeAppearance.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 32),
                     _grid(),
                   ],
@@ -52,6 +52,6 @@ class DeleteAccountWebBody extends StatelessWidget {
   }
 
   Widget _grid() {
-    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterDeleteAccountEnum.toHelpCenterMenu());
+    return HelpCenterStepsGridWebView(helpCenterMenu: HelpCenterChangeAppearance.toHelpCenterMenu());
   }
 }

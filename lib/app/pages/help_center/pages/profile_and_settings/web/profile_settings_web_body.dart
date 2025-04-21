@@ -4,7 +4,6 @@ import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
 import '../../../../../enums/dashboard_tab_enum.dart';
 import '../../../../../views/web/dashboard/dashboard_web_layout.dart';
-import '../../../../../views/web/footer_web.dart';
 import '../../../enums/profile_settings_menu_enum.dart';
 
 class ProfileSettingsWebBody extends StatelessWidget {
