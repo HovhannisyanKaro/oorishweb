@@ -9,12 +9,15 @@ class DashboardHeaderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Padding(padding: EdgeInsets.only(left: 16), child: LogoOorishView()),
-        Align(alignment: Alignment.centerRight, child: tabBarView),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Padding(padding: EdgeInsets.only(left: 16), child: LogoOorishView()),
+          Align(alignment: Alignment.centerRight, child: tabBarView),
+        ],
+      ),
     );
   }
 }
