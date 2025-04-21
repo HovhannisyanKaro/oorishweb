@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "5618e3a410702b956c1123f07bac7fc0",
+const RESOURCES = {"flutter_bootstrap.js": "a48945cd6271b305b0d2018ec68715b5",
 "version.json": "4096f5edb5b303d8f62f685c1e99e834",
 "index.html": "38a59b176f4821434c7724961126603f",
 "/": "38a59b176f4821434c7724961126603f",
@@ -23,7 +23,7 @@ const RESOURCES = {"flutter_bootstrap.js": "5618e3a410702b956c1123f07bac7fc0",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/AssetManifest.bin": "2edd4bd8d96456858042f7d50777e02a",
 "assets/fonts/MaterialIcons-Regular.otf": "47f88139b1af1c33a39b1eedf1f29513",
-"assets/assets/icons/logo_oorish.png": "09e8cfae3d5f621e82ab5b411bc3dcef",
+"assets/assets/icons/logo_oorish.png": "2a77047f82705142f9ba06137d77b0c3",
 "assets/assets/icons/hc/appearance_p_select.png": "be88358bdbc20b633bcfaf0d8f5b5894",
 "assets/assets/icons/hc/profile_p_appearance.png": "deba19809f441251ff7bcb42ba36b4d6",
 "assets/assets/icons/hc/about_p_privacy.png": "c5e8ef1257935de9905283a61981ddc1",
