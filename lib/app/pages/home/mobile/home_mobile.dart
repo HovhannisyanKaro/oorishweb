@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oorishweb/app/enums/dashboard_tab_enum.dart';
 import 'package:oorishweb/app/views/logo_oorish.dart';
 import 'package:oorishweb/app/views/mobile/dashboard/dashboard_mobile_body_layout.dart';
+import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
 import '../../../views/mobile/home/home_build_in_chat_mobile_item_view.dart';
 import '../../../views/mobile/home/home_header_mobile_item_view.dart';
@@ -11,11 +12,14 @@ PreferredSizeWidget dashboardMobileAppBar(BuildContext context, GlobalKey<Scaffo
   return AppBar(
     elevation: 0,
     leadingWidth: 150,
-    leading: const LogoOorishView(),
+    leading: const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
+      child: LogoOorishView(),
+    ),
     actions: [
       IconButton(
         onPressed: () => drawerKey.currentState!.openEndDrawer(),
-        icon: const Icon(Icons.menu, color: Colors.black),
+        icon: Icon(Icons.menu, color: context.themeExt.onSurface),
       ),
     ],
   );
