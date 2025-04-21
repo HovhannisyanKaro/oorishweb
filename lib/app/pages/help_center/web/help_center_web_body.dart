@@ -42,10 +42,8 @@ class _HelpCenterWebBodyState extends State<HelpCenterWebBody> {
               ),
               Container(
                   padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 16),
-                  child: Expanded(
-                    child: Text('We’re sorry that our FAQ did not answer your question. Send us a message to oorish2024@gmail.com! We’re looking forward to reading your email and we will answer it as quickly as we can.',
-                        style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold, color: context.themeExt.onSurface.withOpacity(0.5))),
-                  )),
+                  child: Text('We’re sorry that our FAQ did not answer your question. Send us a message to oorish2024@gmail.com! We’re looking forward to reading your email and we will answer it as quickly as we can.',
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold, color: context.themeExt.onSurface.withOpacity(0.5)))),
             ],
           );
         });

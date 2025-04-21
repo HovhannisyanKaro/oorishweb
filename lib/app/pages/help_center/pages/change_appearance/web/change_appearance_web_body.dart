@@ -44,7 +44,6 @@ class ChangeAppearanceWebBody extends StatelessWidget {
                     Text(ProfileSettingsMenuItems.changeAppearance.title, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 32),
                     _grid(),
-                    const FooterWeb(dashboardTab: DashboardTabEnum.helpCenter),
                   ],
                 ),
               )

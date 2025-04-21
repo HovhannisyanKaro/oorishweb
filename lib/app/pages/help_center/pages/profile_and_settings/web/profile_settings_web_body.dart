@@ -61,7 +61,6 @@ class ProfileSettingsWebBody extends StatelessWidget {
                   ],
                 ),
               ),
-              const FooterWeb(dashboardTab: DashboardTabEnum.helpCenter),
             ],
           );
         });

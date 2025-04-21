@@ -34,7 +34,6 @@ class PrivacyWebBody extends StatelessWidget {
                   ],
                 ),
               ),
-              FooterWeb(dashboardTab: dashboardTab, isPrivacyClickable: false),
             ],
           );
         });
