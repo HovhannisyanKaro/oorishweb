@@ -59,7 +59,7 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             widget.childBuilder.call(context, constraints),
-            // FooterWeb(dashboardTab: widget.selectedTab),
+            FooterWeb(dashboardTab: widget.selectedTab),
           ],
         ),
       );
