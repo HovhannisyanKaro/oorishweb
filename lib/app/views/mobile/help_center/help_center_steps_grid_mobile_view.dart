@@ -17,8 +17,8 @@ class _HelpCenterStepsGridMobileViewState extends State<HelpCenterStepsGridMobil
     final items = widget.helpCenterMenu.items;
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 1 / 1.2,
-        crossAxisCount: 2,
+        childAspectRatio: 1 / 1.1,
+        crossAxisCount: 1,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
       ),
