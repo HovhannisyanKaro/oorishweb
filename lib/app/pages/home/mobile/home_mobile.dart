@@ -5,6 +5,7 @@ import 'package:oorishweb/app/views/mobile/dashboard/dashboard_mobile_body_layou
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
 import '../../../views/mobile/home/home_build_in_chat_mobile_item_view.dart';
+import '../../../views/mobile/home/home_calorie_counter_mobile_item_view.dart';
 import '../../../views/mobile/home/home_header_mobile_item_view.dart';
 import '../../../views/mobile/home/home_share_carts_mobile_item_view.dart';
 
@@ -42,6 +43,8 @@ class HomeMobileBody extends StatelessWidget {
             HomeShareCartsMobileItemView(imageWidth: headerImageSize),
             const Divider(height: 64),
             HomeBuildInChatMobileItemView(imageWidth: headerImageSize),
+            const Divider(height: 64),
+            HomeCalorieCounterMobileItemView(imageWidth: headerImageSize),
           ],
         );
       },

@@ -20,9 +20,9 @@ class HomeShareCartsMobileItemView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            PrefixTextView(text: 'Make and share shopping carts together', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Instantly see changes with live updates on your grocery carts', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Get timely notifications when changes are made', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'Make and share shopping carts together', style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'Instantly see changes with live updates on your grocery carts', style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'Get timely notifications when changes are made', style: Theme.of(context).textTheme.labelMedium),
           ],
         ),
         const SizedBox(height: 32),

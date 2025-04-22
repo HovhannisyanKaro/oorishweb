@@ -20,9 +20,9 @@ class HomeBuildInChatMobileItemView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            PrefixTextView(text: 'No need for extra apps - chat directly within your cart', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Discuss items, plan purchases, and stay connected', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Communicate in real time', isPrefixEnable: false, style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'No need for extra apps - chat directly within your cart',style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'Discuss items, plan purchases, and stay connected',style: Theme.of(context).textTheme.labelMedium),
+            PrefixTextView(text: 'Communicate in real time', style: Theme.of(context).textTheme.labelMedium),
 
           ],
         ),

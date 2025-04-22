@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oorishweb/app/views/mobile/home/home_calorie_counter_mobile_item_view.dart';
 
 import '../../../enums/dashboard_tab_enum.dart';
 import '../../../views/mobile/dashboard/dashboard_mobile_body_layout.dart';
@@ -28,6 +29,8 @@ class _GetOorishMobileBodyState extends State<GetOorishMobileBody> {
             HomeShareCartsMobileItemView(imageWidth: headerImageSize),
             const Divider(height: 64),
             HomeBuildInChatMobileItemView(imageWidth: headerImageSize),
+            const Divider(height: 64),
+            HomeCalorieCounterMobileItemView(imageWidth: headerImageSize),
           ],
         );
       },

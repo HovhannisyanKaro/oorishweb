@@ -60,10 +60,11 @@ class FooterWeb extends StatelessWidget {
   }
 
   Widget _downloadTextButton(BuildContext context) {
-    final themeExt = context.themeExt;
-    return TextButton(
-      child: Text('Download', style: Theme.of(context).textTheme.labelSmall?.copyWith(color: themeExt.primary, fontWeight: FontWeight.bold)),
-      onPressed: () => launchOorishGooglePlayStore(context),
-    );
+    return Container();
+    // final themeExt = context.themeExt;
+    // return TextButton(
+    //   child: Text('', style: Theme.of(context).textTheme.labelSmall?.copyWith(color: themeExt.primary, fontWeight: FontWeight.bold)),
+    //   onPressed: () => launchOorishGooglePlayStore(context),
+    // );
   }
 }

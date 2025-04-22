@@ -21,7 +21,7 @@ class HomeHeaderWebItemView extends StatelessWidget {
           children: [
             Text('Shopping list for sharing & \nCalorie Tracker', style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
             const SizedBox(height: 16),
-            Text('Easily create and share shopping lists with your family or friends \nTrack your Calories easily', style: Theme.of(context).textTheme.labelSmall),
+            Text('Easily create and share shopping lists with your family or friends \nTrack your Calories easily.', style: Theme.of(context).textTheme.labelSmall),
             const SizedBox(height: 32),
             _headerStoreButtons(context)
           ],

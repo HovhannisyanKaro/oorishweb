@@ -25,30 +25,8 @@ class FooterMobile extends StatelessWidget {
         const SizedBox(height: 32),
         _privacyTextButton(context),
         _downloadTextButton(context),
+        const SizedBox(height: 32),
       ],
-    );
-  }
-
-  Widget _storeButtons(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        InkWell(onTap: () => launchOorishAooStore(context), child: OorishConstraintLayout(maxWidth: 200, maxHeight: 55, child: AppIcons.imageAppStore.imageAsset(width: 200, height: 55))),
-        InkWell(onTap: () => launchOorishGooglePlayStore(context), child: OorishConstraintLayout(maxWidth: 200, maxHeight: 55, child: AppIcons.imageGoogleStore.imageAsset(width: 200, height: 55))),
-      ],
-    );
-  }
-
-  Widget _privacy(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _privacyTextButton(context),
-          _downloadTextButton(context),
-        ],
-      ),
     );
   }
 
@@ -63,10 +41,6 @@ class FooterMobile extends StatelessWidget {
   }
 
   Widget _downloadTextButton(BuildContext context) {
-    final themeExt = context.themeExt;
-    return TextButton(
-      child: Text('Download', style: Theme.of(context).textTheme.labelSmall?.copyWith(color: themeExt.primary, fontWeight: FontWeight.bold)),
-      onPressed: () => launchOorishGooglePlayStore(context),
-    );
+    return Container();
   }
 }
