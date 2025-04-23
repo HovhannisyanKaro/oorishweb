@@ -121,3 +121,146 @@ For any questions, contact us at oorish2024@gmail.com.
 
 By using Oorish, you confirm that you have read, understood, and agree to these Terms.
 ''';
+
+
+const privacyValueVersion2 = '''
+Effective Date: [January 15, 2025]
+
+This Privacy Policy explains how Oorish ("we," "our," or "us") collects, uses, and protects your information when you use our mobile application ("Oorish").
+
+1. Information We Collect
+
+We collect the following information:
+
+Name
+
+Email address
+
+User profile photo
+
+Meal photos
+
+Device information (used for notifications, analytics, and ads)
+
+We do not intentionally collect precise location data, but services like Firebase Analytics may access this information as part of their operations.
+
+2. Authentication Methods
+
+Users can sign in using:
+
+Email and Password
+
+Google Sign-In
+
+Apple Sign-In
+
+Anonymous Authentication
+
+3. How We Use Your Data
+
+We use your data to:
+
+Store and track meal logs
+
+Sync shopping lists across devices and users
+
+Enable chat functionality within shared shopping carts
+
+4. Sharing Your Information
+
+We may share your data with third parties for the following purposes:
+
+Analytics
+
+Advertising (including AdMob)
+
+Crash reporting
+
+Third-party services include Firebase, AdMob, and Google Analytics.
+
+5. Use of AI
+
+To analyze meal descriptions or photos for calorie tracking, we send food-related data to Google Gemini AI.
+
+6. Data Storage
+
+All user data is securely stored in Firebase infrastructure.
+
+7. Age Restriction
+
+Oorish is intended for users aged 18 or older. Users under 18 are not permitted to use the app, especially due to the inclusion of alcohol-related items.
+
+8. User Rights
+
+Account Deletion: Users can delete their accounts at any time. All associated data will be permanently removed from Firebase.
+
+Data Export: Currently, Oorish does not support data export functionality.
+
+9. Tracking Technologies
+
+We use:
+
+Device identifiers for push notifications
+
+Image caching for offline functionality
+
+10. Contact
+
+If you have questions or concerns regarding this policy, contact us at:
+oorish2024@gmail.com
+''';
+
+const termsValueVersion2 = '''
+Effective Date: [January 15, 2025]
+
+These Terms of Use govern your access to and use of Oorish. By using our app, you agree to comply with these terms.
+
+1. Ownership
+
+Oorish is owned and operated by Hovhannisyan Karo, under the brand name "Oorish."
+
+2. Usage Restrictions
+
+You may not:
+
+Upload nude, violent, or otherwise inappropriate content
+
+Misuse the app for illegal or abusive purposes
+
+3. Account Management
+
+We reserve the right to suspend or terminate accounts that violate our content policies or terms of use.
+
+4. User-Generated Content
+
+Users can upload the following:
+
+Account images
+
+Product comments, names, photos, quantities, prices, and URLs
+
+Meal descriptions and photos for calorie tracking
+
+Chat messages within shared shopping carts
+
+We may moderate or remove content that violates our policies.
+
+5. Cost
+
+Oorish is completely free to use. There are no in-app purchases or subscription fees.
+
+6. Disclaimers
+
+We do not guarantee the nutritional accuracy of AI-generated food data. Always consult a health professional for dietary advice.
+
+7. Jurisdiction
+
+These Terms are intended to be valid worldwide and will comply with applicable laws, including but not limited to those in the USA, European Union, and Armenia.
+
+8. Support Contact
+
+For help or questions, please contact:
+oorish2024@gmail.com
+
+By using Oorish, you agree to this Privacy Policy and these Terms of Use.
+''';

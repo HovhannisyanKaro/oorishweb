@@ -32,11 +32,11 @@ class _PrivacyMobileBodyState extends State<PrivacyMobileBody> {
             const SizedBox(height: 32),
             Text('Privacy Policy', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold, color: themeExt.primary)),
             const SizedBox(height: 32),
-            Text(privacyValue, style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold)),
+            Text(privacyValueVersion2, style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold)),
             const SizedBox(height: 64),
             Text('Terms And Conditions', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold, color: themeExt.primary)),
             const SizedBox(height: 32),
-            Text(termsValue, style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold)),
+            Text(termsValueVersion2, style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold)),
           ],
         );
       },
