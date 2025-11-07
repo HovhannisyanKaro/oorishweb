@@ -43,7 +43,7 @@ class AppThemesData {
       progressIndicatorTheme: ProgressIndicatorThemesData.get(themeExt),
       navigationBarTheme: NavigationBarThemesData.get(themeExt),
       dividerTheme: DividerThemesData.get(themeExt),
-      tabBarTheme: TabBarThemeData.get(themeExt),
+      tabBarTheme: BeremTabBarThemeData.get(themeExt),
       pageTransitionsTheme: const PageTransitionsTheme(builders: {
         TargetPlatform.android: NoTransitionsBuilder(),
         TargetPlatform.iOS: NoTransitionsBuilder(),

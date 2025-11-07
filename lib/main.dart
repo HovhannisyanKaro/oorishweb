@@ -5,6 +5,7 @@ import 'package:oorishweb/app/pages/help_center/help_center_page.dart';
 import 'package:oorishweb/app/pages/help_center/pages/items_and_carts/items_and_carts_page.dart';
 import 'package:oorishweb/app/pages/help_center/pages/profile_and_settings/profile_settings_page.dart';
 import 'package:oorishweb/app/pages/home/home_page.dart';
+import 'package:oorishweb/app/pages/kids_apps/kids_apps_page.dart';
 import 'package:oorishweb/app/pages/privacy/privacy_page.dart';
 import 'package:oorishweb/res/values/theme/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -63,6 +64,8 @@ class MyApp extends StatelessWidget {
                 return const ChangeAppearancePage();
               case OorishWebRoutesEnum.itemsAndCarts:
                 return const ItemsAndCartsPage();
+              case OorishWebRoutesEnum.kidsApps:
+                return const KidsAppsPage();
             }
           },
       },
@@ -81,6 +84,7 @@ enum OorishWebRoutesEnum {
   findPrivacy(route: '/find-privacy'),
   changeAppearance(route: '/change-appearance'),
   itemsAndCarts(route: '/items-carts'),
+  kidsApps(route: '/kids-apps'),
   ;
 
   final String route;
@@ -108,6 +112,8 @@ extension NavigationExtension on BuildContext {
   void navigateToChangeAppearance() => Navigator.of(this).pushNamed(OorishWebRoutesEnum.changeAppearance.route);
 
   void navigateToItemsAndCarts() => Navigator.of(this).pushNamed(OorishWebRoutesEnum.itemsAndCarts.route);
+
+  void navigateToKidsApps() => Navigator.of(this).pushReplacementNamed(OorishWebRoutesEnum.kidsApps.route);
 
   void pop() => Navigator.of(this).pop();
 }

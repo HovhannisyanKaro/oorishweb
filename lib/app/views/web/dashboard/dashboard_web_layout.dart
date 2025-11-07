@@ -46,6 +46,9 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
                 case DashboardTabEnum.home:
                   context.navigateToHome();
                   break;
+                case DashboardTabEnum.kidsApps:
+                  context.navigateToKidsApps();
+                  break;
               }
             }));
   }

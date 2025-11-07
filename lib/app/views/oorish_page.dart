@@ -42,6 +42,9 @@ class _OorishPageState extends State<OorishPage> {
             case DashboardTabEnum.getOorish:
               context.navigateToGetOorish();
               break;
+            case DashboardTabEnum.kidsApps:
+              context.navigateToKidsApps();
+              break;
           }
         },
       ),
