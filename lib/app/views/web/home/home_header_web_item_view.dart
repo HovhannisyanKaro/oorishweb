@@ -4,10 +4,13 @@ import '../../../../common/views/constraint_layout.dart';
 import '../../../../res/values/images/images.dart';
 import '../../../utils/app_utils.dart';
 
+enum HomeHeaderAlignmentEnum { imageLeft, imageRight }
+
 class HomeHeaderWebItemView extends StatelessWidget {
   final double imageWidth;
+  final HomeHeaderAlignmentEnum alignment;
 
-  const HomeHeaderWebItemView({super.key, required this.imageWidth});
+  const HomeHeaderWebItemView({super.key, required this.imageWidth, this.alignment = HomeHeaderAlignmentEnum.imageRight});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +18,7 @@ class HomeHeaderWebItemView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        if (alignment == HomeHeaderAlignmentEnum.imageLeft) AppIcons.imageShopListCalCount2in1.imageAsset(width: imageWidth, height: imageWidth),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -26,7 +30,7 @@ class HomeHeaderWebItemView extends StatelessWidget {
             _headerStoreButtons(context)
           ],
         ),
-        AppIcons.imageShopListCalCount2in1.imageAsset(width: imageWidth, height: imageWidth),
+        if (alignment == HomeHeaderAlignmentEnum.imageRight) AppIcons.imageShopListCalCount2in1.imageAsset(width: imageWidth, height: imageWidth),
       ],
     );
   }

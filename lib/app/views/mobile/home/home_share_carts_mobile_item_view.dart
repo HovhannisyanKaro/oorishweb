@@ -10,25 +10,28 @@ class HomeShareCartsMobileItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('Share Carts', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
-        const SizedBox(height: 32),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            PrefixTextView(text: 'Make and share shopping carts together', style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Instantly see changes with live updates on your grocery carts', style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Get timely notifications when changes are made', style: Theme.of(context).textTheme.labelMedium),
-          ],
-        ),
-        const SizedBox(height: 32),
-        AppIcons.imageShareCarts.imageAsset(width: imageWidth, height: imageWidth),
-        const SizedBox(width: 64),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Share Carts', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 32),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              PrefixTextView(text: 'Make and share shopping carts together', style: Theme.of(context).textTheme.labelMedium),
+              PrefixTextView(text: 'Instantly see changes with live updates on your grocery carts', style: Theme.of(context).textTheme.labelMedium),
+              PrefixTextView(text: 'Get timely notifications when changes are made', style: Theme.of(context).textTheme.labelMedium),
+            ],
+          ),
+          const SizedBox(height: 32),
+          AppIcons.imageShareCarts.imageAsset(width: imageWidth, height: imageWidth),
+          const SizedBox(width: 64),
+        ],
+      ),
     );
   }
 }

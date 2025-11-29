@@ -133,4 +133,40 @@ abstract final class AppColors {
       500: Color(0xFF3E4756),
     },
   );
+
+  static const int _orangeYellow = 0xFFF4C853;
+
+  static const MaterialColor orangeYellow = MaterialColor(
+    _orangeYellow,
+    <int, Color>{
+      500: Color(0xFFF4C853),
+    },
+  );
+
+  static const int _pinkishRed = 0xFFE2687B;
+
+  static const MaterialColor pinkishRed = MaterialColor(
+    _pinkishRed,
+    <int, Color>{
+      500: Color(0xFFE2687B),
+    },
+  );
+
+  static const int _cyanBlue = 0xFF6DC7F4;
+
+  static const MaterialColor cyanBlue = MaterialColor(
+    _cyanBlue,
+    <int, Color>{
+      500: Color(0xFF6DC7F4),
+    },
+  );
+
+  static const int _greenCyan = 0xFF5CC18A;
+
+  static const MaterialColor greenCyan = MaterialColor(
+    _greenCyan,
+    <int, Color>{
+      500: Color(0xFF5CC18A),
+    },
+  );
 }

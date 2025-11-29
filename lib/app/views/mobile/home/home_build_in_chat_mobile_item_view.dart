@@ -10,25 +10,28 @@ class HomeBuildInChatMobileItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('Build-in Chat', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
-        const SizedBox(height: 32),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            PrefixTextView(text: 'No need for extra apps - chat directly within your cart',style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Discuss items, plan purchases, and stay connected',style: Theme.of(context).textTheme.labelMedium),
-            PrefixTextView(text: 'Communicate in real time', style: Theme.of(context).textTheme.labelMedium),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Build-in Chat', style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 32),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              PrefixTextView(text: 'No need for extra apps - chat directly within your cart',style: Theme.of(context).textTheme.labelMedium),
+              PrefixTextView(text: 'Discuss items, plan purchases, and stay connected',style: Theme.of(context).textTheme.labelMedium),
+              PrefixTextView(text: 'Communicate in real time', style: Theme.of(context).textTheme.labelMedium),
 
-          ],
-        ),
-        const SizedBox(height: 32),
-        AppIcons.imageBuildInChat.imageAsset(width: imageWidth, height: imageWidth),
-      ],
+            ],
+          ),
+          const SizedBox(height: 32),
+          AppIcons.imageBuildInChat.imageAsset(width: imageWidth, height: imageWidth),
+        ],
+      ),
     );
   }
 }

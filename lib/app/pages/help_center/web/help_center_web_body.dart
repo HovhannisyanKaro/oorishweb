@@ -25,6 +25,8 @@ class _HelpCenterWebBodyState extends State<HelpCenterWebBody> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 32),
+              Center(child: Text('Shopping List & Calorie Tracker', textAlign: TextAlign.center, style: Theme.of(context).textTheme.displaySmall)),
+              const SizedBox(height: 32),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 150),
                 child: Text('HELP CENTER', style: Theme.of(context).textTheme.labelSmall?.copyWith(fontWeight: FontWeight.bold, color: context.themeExt.onSurface.withOpacity(0.5))),

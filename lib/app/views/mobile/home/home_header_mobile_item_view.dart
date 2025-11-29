@@ -11,19 +11,22 @@ class HomeHeaderMobileItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const SizedBox(height: 32),
-        Text('Shopping list for sharing & Calorie Tracker',textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
-        const SizedBox(height: 16),
-        Text('Easily create and share shopping lists with your family or friends \nTrack your Calories easily.', style: Theme.of(context).textTheme.labelMedium),
-        const SizedBox(height: 32),
-        AppIcons.imageShopListCalCount2in1.imageAsset(width: imageWidth, height: imageWidth),
-        const SizedBox(height: 32),
-        _headerStoreButtons(context)
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const SizedBox(height: 32),
+          Text('Shopping list for sharing & Calorie Tracker',textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 16),
+          Text('Easily create and share shopping lists with your family or friends \nTrack your Calories easily.', style: Theme.of(context).textTheme.labelMedium),
+          const SizedBox(height: 32),
+          AppIcons.imageShopListCalCount2in1.imageAsset(width: imageWidth, height: imageWidth),
+          const SizedBox(height: 32),
+          _headerStoreButtons(context)
+        ],
+      ),
     );
   }
 

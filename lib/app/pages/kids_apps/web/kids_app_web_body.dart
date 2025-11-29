@@ -14,7 +14,7 @@ class _KidsAppWebBodyState extends State<KidsAppWebBody> {
   @override
   Widget build(BuildContext context) {
     return DashboardWebLayout(
-        selectedTab: DashboardTabEnum.kidsApps,
+        selectedTab: DashboardTabEnum.babyPhone,
         childBuilder: (context, constraints) {
           final width = constraints.maxWidth / 1.5;
           final headerImageSize = width / 2;

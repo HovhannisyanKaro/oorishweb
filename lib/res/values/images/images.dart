@@ -25,6 +25,22 @@ enum AppIcons {
 
   imageHCProfilePAppearance(path: 'assets/icons/hc/profile_p_appearance.png'),
   imageHCAppearancePSelect(path: 'assets/icons/hc/appearance_p_select.png'),
+
+  babyPhoneLaunchHome(path: 'assets/icons/baby_phone/launch_home.png'),
+  babyPhoneLearnTime(path: 'assets/icons/baby_phone/baby_phone_learn_time.png'),
+  babyPhoneLearnForestAnimals(path: 'assets/icons/baby_phone/baby_phone_learn_forest_animals.png'),
+  babyPhoneLearnOceanAnimals(path: 'assets/icons/baby_phone/baby_phone_learn_ocean_animals.png'),
+  babyPhoneLearnDomesticAnimals(path: 'assets/icons/baby_phone/baby_phone_learn_domestic_animals.png'),
+  babyPhoneLearnFruits(path: 'assets/icons/baby_phone/baby_phone_learn_fruits.png'),
+  babyPhoneLearnVeggies(path: 'assets/icons/baby_phone/baby_phone_learn_veggies.png'),
+  babyPhonePixelArt(path: 'assets/icons/baby_phone/baby_phone_pixel_art.png'),
+  babyPhoneMemoryMatch(path: 'assets/icons/baby_phone/baby_phone_memory_match.png'),
+  babyPhoneGuessAnimal(path: 'assets/icons/baby_phone/baby_phone_guess_animal.png'),
+  babyPhoneGuessColorShape(path: 'assets/icons/baby_phone/baby_phone_guess_color_shape.png'),
+  babyPhoneColoring(path: 'assets/icons/baby_phone/baby_phone_coloring.png'),
+  babyPhoneTelephony(path: 'assets/icons/baby_phone/baby_phone_telephony.png'),
+  babyPhoneMiniGames(path: 'assets/icons/baby_phone/baby_phone_mini_games.png'),
+  babyPhoneIcLauncher(path: 'assets/icons/baby_phone/ic_launcher.png'),
   ;
 
   final String path;

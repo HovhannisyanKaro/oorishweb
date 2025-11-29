@@ -1,0 +1,1 @@
+enum WidgetThemeEnum { light, dark }

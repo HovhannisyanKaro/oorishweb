@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oorishweb/app/views/web/footer_web.dart';
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
 import '../../../enums/dashboard_tab_enum.dart';

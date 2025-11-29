@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oorishweb/app/views/web/footer_web.dart';
+import 'package:oorishweb/app/views/footer/footer_view.dart';
 import 'package:oorishweb/main.dart';
+import 'package:oorishweb/res/values/platform_type_enum.dart';
 
 import '../../../enums/dashboard_tab_enum.dart';
 import '../header_tabs_web.dart';
@@ -9,8 +10,9 @@ import 'dashboard_header_view.dart';
 class DashboardWebLayout extends StatefulWidget {
   final DashboardTabEnum selectedTab;
   final Widget Function(BuildContext, BoxConstraints) childBuilder;
+  final bool isFooterEnable;
 
-  const DashboardWebLayout({super.key, required this.selectedTab, required this.childBuilder});
+  const DashboardWebLayout({super.key, required this.selectedTab, required this.childBuilder, this.isFooterEnable = true});
 
   @override
   State<DashboardWebLayout> createState() => _DashboardWebLayoutState();
@@ -46,9 +48,11 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
                 case DashboardTabEnum.home:
                   context.navigateToHome();
                   break;
-                case DashboardTabEnum.kidsApps:
-                  context.navigateToKidsApps();
+                case DashboardTabEnum.babyPhone:
+                  context.navigateToBabyPhone();
                   break;
+                case DashboardTabEnum.shoppingList:
+                  context.navigateToShoppingList();
               }
             }));
   }
@@ -60,7 +64,8 @@ class _DashboardWebLayoutState extends State<DashboardWebLayout> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             widget.childBuilder.call(context, constraints),
-            FooterWeb(dashboardTab: widget.selectedTab),
+            // if (widget.isFooterEnable) FooterWeb(dashboardTab: widget.selectedTab),
+            if (widget.isFooterEnable) FooterView(platformType: PlatformTypeEnum.web, dashboardTab: widget.selectedTab),
           ],
         ),
       );

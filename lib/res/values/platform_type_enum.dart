@@ -1,0 +1,1 @@
+enum PlatformTypeEnum { web, mobile }

@@ -12,8 +12,9 @@ class OorishPage extends StatefulWidget {
   final DashboardTabEnum dashboardTabEnum;
   final Widget webBody;
   final Widget mobileBody;
+  final Color? backgroundColor;
 
-  const OorishPage({super.key, required this.webBody, required this.mobileBody, required this.dashboardTabEnum});
+  const OorishPage({super.key, required this.webBody, required this.mobileBody, required this.dashboardTabEnum, this.backgroundColor});
 
   @override
   State<OorishPage> createState() => _OorishPageState();
@@ -27,6 +28,7 @@ class _OorishPageState extends State<OorishPage> {
     return Scaffold(
       key: drawerKey,
       appBar: _appBar(),
+      backgroundColor: widget.backgroundColor,
       body: _body(),
       endDrawer: DashboardMobileNavigationDrawer(
         drawerKey: drawerKey,
@@ -42,8 +44,11 @@ class _OorishPageState extends State<OorishPage> {
             case DashboardTabEnum.getOorish:
               context.navigateToGetOorish();
               break;
-            case DashboardTabEnum.kidsApps:
-              context.navigateToKidsApps();
+            case DashboardTabEnum.babyPhone:
+              context.navigateToBabyPhone();
+              break;
+            case DashboardTabEnum.shoppingList:
+              context.navigateToShoppingList();
               break;
           }
         },

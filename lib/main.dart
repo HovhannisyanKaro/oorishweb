@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oorishweb/app/enums/dashboard_tab_enum.dart';
+import 'package:oorishweb/app/pages/baby_phone/baby_phone_page.dart';
+import 'package:oorishweb/app/pages/baby_phone_privacy/baby_phone_privacy_page.dart';
 import 'package:oorishweb/app/pages/get_oorish/get_oorish_page.dart';
 import 'package:oorishweb/app/pages/help_center/help_center_page.dart';
 import 'package:oorishweb/app/pages/help_center/pages/items_and_carts/items_and_carts_page.dart';
@@ -7,6 +9,7 @@ import 'package:oorishweb/app/pages/help_center/pages/profile_and_settings/profi
 import 'package:oorishweb/app/pages/home/home_page.dart';
 import 'package:oorishweb/app/pages/kids_apps/kids_apps_page.dart';
 import 'package:oorishweb/app/pages/privacy/privacy_page.dart';
+import 'package:oorishweb/app/pages/shopping_list/shopping_list_page.dart';
 import 'package:oorishweb/res/values/theme/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
 
@@ -18,6 +21,8 @@ import 'config/app_theme_config.dart';
 import 'dashboard/size_config.dart';
 
 late final AppThemeConfig appThemeConfig;
+
+final appRouteObserver = RouteObserver<ModalRoute<void>>();
 
 void main() {
   setPathUrlStrategy();
@@ -36,6 +41,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return MaterialApp(
+      navigatorObservers: [appRouteObserver],
       debugShowCheckedModeBanner: false,
       title: 'oorish',
       theme: AppThemesData().light,
@@ -66,6 +72,12 @@ class MyApp extends StatelessWidget {
                 return const ItemsAndCartsPage();
               case OorishWebRoutesEnum.kidsApps:
                 return const KidsAppsPage();
+              case OorishWebRoutesEnum.babyPhone:
+                return const BabyPhonePage();
+              case OorishWebRoutesEnum.shoppingList:
+                return const ShoppingListPage();
+              case OorishWebRoutesEnum.privacyPolicyBabyPhone:
+                return const BabyPhonePrivacy();
             }
           },
       },
@@ -85,6 +97,9 @@ enum OorishWebRoutesEnum {
   changeAppearance(route: '/change-appearance'),
   itemsAndCarts(route: '/items-carts'),
   kidsApps(route: '/kids-apps'),
+  babyPhone(route: '/baby-phone'),
+  shoppingList(route: '/shopping-list'),
+  privacyPolicyBabyPhone(route: '/privacy-policy-babyphone'),
   ;
 
   final String route;
@@ -115,5 +130,12 @@ extension NavigationExtension on BuildContext {
 
   void navigateToKidsApps() => Navigator.of(this).pushReplacementNamed(OorishWebRoutesEnum.kidsApps.route);
 
+  void navigateToBabyPhone() => Navigator.of(this).pushReplacementNamed(OorishWebRoutesEnum.babyPhone.route);
+
+  void navigateToShoppingList() => Navigator.of(this).pushReplacementNamed(OorishWebRoutesEnum.shoppingList.route);
+
+  void navigateToBabyPhonePrivacy({DashboardTabEnum dashboardTab = DashboardTabEnum.home}) => Navigator.of(this).pushNamed(OorishWebRoutesEnum.privacyPolicyBabyPhone.route, arguments: dashboardTab);
+
   void pop() => Navigator.of(this).pop();
+
 }

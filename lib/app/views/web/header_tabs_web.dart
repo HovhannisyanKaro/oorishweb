@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oorishweb/common/flutter/widgets/text/colorful_text.dart';
 import 'package:oorishweb/res/values/theme/theme_ext.dart';
 
 import '../../enums/dashboard_tab_enum.dart';
@@ -28,18 +29,20 @@ class _HeaderTabsWebState extends State<HeaderTabsWeb> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        for (final tab in _tabItems) _tabButton(tab),
+        for (final tab in _tabItems) _tabButton(tab, colorfulText: tab == DashboardTabEnum.babyPhone),
       ],
     );
   }
 
-  Widget _tabButton(DashboardTabEnum dashboardTab) {
+  Widget _tabButton(DashboardTabEnum dashboardTab, {bool colorfulText = false}) {
     final themeExt = context.themeExt;
     Color backgroundColor = Colors.transparent;
-    Color textColor = themeExt.onSurface.withOpacity(0.5);
+    Color textColor = themeExt.onSurface.withValues(alpha: 0.5);
     FontWeight? fontWeight;
     if (dashboardTab == _selectedTab) {
-      backgroundColor = themeExt.primary.withOpacity(0.1);
+      final primaryColor = colorfulText ? Colors.white : themeExt.primary;
+      final alpha = colorfulText ? 0.3 : 0.1;
+      backgroundColor = primaryColor.withValues(alpha: alpha);
       fontWeight = FontWeight.bold;
     }
 
@@ -61,13 +64,16 @@ class _HeaderTabsWebState extends State<HeaderTabsWeb> {
           margin: const EdgeInsets.symmetric(horizontal: 12),
           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),
           decoration: BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(8)),
-          child: Text(
-            dashboardTab.title,
-            style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                  color: textColor,
-                  fontWeight: fontWeight,
-                ),
-          )),
+          child: switch (colorfulText) {
+            true => ColorfulText(
+                text: dashboardTab.title,
+                // style: Theme.of(context).textTheme.labelMedium?.copyWith(color: textColor, fontWeight: fontWeight),
+              ),
+            false => Text(
+                dashboardTab.title,
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(color: textColor, fontWeight: fontWeight),
+              ),
+          }),
     );
   }
 }
