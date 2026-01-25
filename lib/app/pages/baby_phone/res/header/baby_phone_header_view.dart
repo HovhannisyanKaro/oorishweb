@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:oorishweb/app/utils/app_utils.dart';
 import 'package:oorishweb/common/views/constraint_layout.dart';
 import 'package:oorishweb/main.dart';
 import 'package:oorishweb/res/values/images/images.dart';
 import 'package:oorishweb/res/values/platform_type_enum.dart';
 import 'package:oorishweb/res/values/widget_theme.dart';
+
+import '../../../../../common/utils/string_utils.dart';
+import '../../../../../res/values/oorish_app_product.dart';
 
 part '_launcher_icon.dart';
 part '_store_buttons.dart';
@@ -41,7 +43,7 @@ class BabyPhoneHeaderView extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [_TitleBlock(isNavigationEnable: isNavigationEnable, textColor: textColor), const _StoreButtons(isLauncherIconEnable: true)],
+          children: [_TitleBlock(isNavigationEnable: isNavigationEnable, textColor: textColor), const _StoreButtons(isLauncherIconEnable: true, appProduct: OorishAppProduct.babyPhone)],
         ),
         AppIcons.babyPhoneLaunchHome.imageAsset(width: imageSize, height: imageSize),
       ],
@@ -58,7 +60,7 @@ class BabyPhoneHeaderView extends StatelessWidget {
         const SizedBox(height: 32),
         const _LauncherIcon(),
         const SizedBox(height: 32),
-        const _StoreButtons()
+        const _StoreButtons(appProduct: OorishAppProduct.babyPhone)
       ],
     );
   }
